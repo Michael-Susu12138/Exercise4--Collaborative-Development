@@ -9,3 +9,6 @@ Anik Barua
 Christ Chen
 
 Nathan Cantu
+
+**Please Join our Discord Channel:**
+https://discord.gg/etCxZrKZ6Q
