@@ -7,13 +7,15 @@ public class Player : MonoBehaviour
 {
     int speed = 10;
     int bulletSpeed = 400;
-    // int lifeCounter = 3; // player gets total 3 life
+
+    int lifeCounter = 3; // player gets total 3 life
     public AudioClip shootSound;
     public Transform spawnPoint;
     public GameObject bulletPrefab;
-    // public GameObject[] totalLife; // array to hold heart images
+    public GameObject[] totalLife; // array to hold heart images
     // public GameObject deadSound;
-    // public string levelName = "End";
+    public string endGame = "GameOver";
+
     Rigidbody2D _rigidbody2D;
     AudioSource _audioSource;
 
@@ -38,17 +40,19 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //if(other.CompareTag("Enemy") || other.CompareTag("Enemy2") || other.CompareTag("Enemy2V2") || other.CompareTag("Enemy3"))
-        //{
+
+        if(other.CompareTag("Enemy") || other.CompareTag("Enemy2") || other.CompareTag("Enemy2V2") || other.CompareTag("Enemy3"))
+        {
             // If no more heart left, then the player is dead.
-            //if (lifeCounter == 1) {
-            //    SceneManager.LoadScene(levelName);
-            //} else {
-            //    Instantiate(deadSound, transform.position, Quaternion.identity); // dead sound per collision
-            //    lifeCounter = lifeCounter - 1; // when a zombie hits, lose 1 life
-            //    Destroy(other.gameObject); // Destroy the zombie
-            //    Destroy(totalLife[lifeCounter].gameObject); // Destroy's heart image per collision with zombie
-            //}
-        //}
+            if (lifeCounter == 1) {
+               SceneManager.LoadScene(endGame);
+            } else {
+               // Instantiate(deadSound, transform.position, Quaternion.identity); // dead sound per collision
+               lifeCounter = lifeCounter - 1; // when a zombie hits, lose 1 life
+               Destroy(other.gameObject); // Destroy the zombie
+               Destroy(totalLife[lifeCounter].gameObject); // Destroy's heart image per collision with zombie
+            }
+        }
+
     }
 }

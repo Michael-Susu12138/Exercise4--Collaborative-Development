@@ -3,8 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+
+
+
   tags:
   - Bullet
+  - kill
+  - Enemy
+  - score
+
+
   layers:
   - Default
   - TransparentFX
@@ -42,6 +50,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 1136509541
+
+  - name: bg
+    uniqueID: 1340076217
+    locked: 0
+  - name: userIntace
+    uniqueID: 1807553359
+    locked: 0
+  - name: GameObject
+    uniqueID: 1436272351
+
     locked: 0

@@ -5,8 +5,9 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    //public int score = 0;
-    //public TextMeshProUGUI scoreUI;
+
+    private int score = 0;
+    public TextMeshProUGUI scoreUI;
 
     private void Awake() {
         // Don't Destroy on Load
@@ -20,13 +21,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //scoreUI.text = "SCORE: " + score;
+
+        scoreUI.text = "SCORE: " + score;
+
     }
 
     public void AddScore(int points) 
     {
-        //score += points;
-        //GameObject.FindGameObjectWithTag("score").GetComponent<TextMeshProUGUI>().text = "SCORE: " + score;
+
+        score += points;
+        GameObject.FindGameObjectWithTag("score").GetComponent<TextMeshProUGUI>().text = "SCORE: " + score;
+
     }
     // Update is called once per frame
     void Update()
