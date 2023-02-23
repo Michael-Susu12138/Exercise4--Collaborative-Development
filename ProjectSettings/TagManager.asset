@@ -3,15 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< Updated upstream
-  tags: []
-=======
+
+
+
   tags:
   - Bullet
   - kill
   - Enemy
   - score
->>>>>>> Stashed changes
+
+
   layers:
   - Default
   - TransparentFX
@@ -49,6 +50,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+
   - name: bg
     uniqueID: 1340076217
     locked: 0
@@ -57,4 +59,5 @@ TagManager:
     locked: 0
   - name: GameObject
     uniqueID: 1436272351
+
     locked: 0
