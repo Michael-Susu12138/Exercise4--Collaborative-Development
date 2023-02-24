@@ -10,9 +10,20 @@ GameObject:
   m_Component:
   - component: {fileID: 7763508514055764600}
   - component: {fileID: 7763508514055764601}
+<<<<<<< Updated upstream
   m_Layer: 0
   m_Name: chickZombie
   m_TagString: Untagged
+=======
+  - component: {fileID: 3329395541835670762}
+  - component: {fileID: -8869936162122203991}
+  - component: {fileID: 327319485981466544}
+  - component: {fileID: 547608108800716355}
+  - component: {fileID: 944073846}
+  m_Layer: 0
+  m_Name: chickZombie
+  m_TagString: Enemy
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,3 +95,213 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
+=======
+--- !u!60 &3329395541835670762
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763508514055764598}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.93, y: 1.32}
+    newSize: {x: 0.93, y: 1.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.195, y: -0.53}
+      - {x: 0.305, y: -0.45999998}
+      - {x: 0.325, y: -0.35999998}
+      - {x: 0.435, y: -0.29}
+      - {x: 0.465, y: -0.19999999}
+      - {x: 0.465, y: -0.12}
+      - {x: 0.435, y: -0.01}
+      - {x: 0.275, y: 0.14999999}
+      - {x: 0.325, y: 0.22999999}
+      - {x: 0.36499998, y: 0.31}
+      - {x: 0.355, y: 0.5}
+      - {x: 0.235, y: 0.63}
+      - {x: 0.155, y: 0.65999997}
+      - {x: -0.024999999, y: 0.65999997}
+      - {x: -0.125, y: 0.62}
+      - {x: -0.185, y: 0.57}
+      - {x: -0.225, y: 0.32999998}
+      - {x: -0.155, y: 0.17}
+      - {x: -0.175, y: 0}
+      - {x: -0.24499999, y: 0.06}
+      - {x: -0.345, y: 0.11}
+      - {x: -0.45499998, y: 0.12}
+      - {x: -0.465, y: 0.049999997}
+      - {x: -0.465, y: -0.049999997}
+      - {x: -0.415, y: -0.14}
+      - {x: -0.415, y: -0.32}
+      - {x: -0.375, y: -0.39}
+      - {x: -0.175, y: -0.55}
+      - {x: -0.085, y: -0.62}
+      - {x: -0.065, y: -0.62}
+      - {x: -0.065, y: -0.64}
+      - {x: -0.055, y: -0.65999997}
+      - {x: 0.095, y: -0.65999997}
+      - {x: 0.16499999, y: -0.63}
+      - {x: 0.155, y: -0.59}
+      - {x: 0.105, y: -0.55}
+--- !u!50 &-8869936162122203991
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763508514055764598}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!82 &327319485981466544
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763508514055764598}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fea570457815345c69d802dec7e4f2d4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &547608108800716355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763508514055764598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9e9c2a4b26eb545bfb130b9bd62a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 20
+  health: 150
+  explosion: {fileID: 6141208311391180065, guid: b891a0caa9ffb45a19d06415b0d9aeb1, type: 3}
+  bigBang: {fileID: 3940656160672922469, guid: ba2f2a788ffc248fdb3a71c1eaf33435, type: 3}
+--- !u!114 &944073846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763508514055764598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9802e2df1c9832743971b5aa8331046a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyBullet: {fileID: 5371433169464853727, guid: 099ec31612f7b2740b96ef69c2bc1a34, type: 3}
+>>>>>>> Stashed changes

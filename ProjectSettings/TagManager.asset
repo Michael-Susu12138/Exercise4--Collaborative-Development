@@ -11,6 +11,11 @@ TagManager:
   - Grenade
   - heart
   - GrenadeIcon
+<<<<<<< Updated upstream
+=======
+  - portal
+  - enemyBullet
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
