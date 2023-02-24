@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+<<<<<<< Updated upstream
+=======
+  - kill
+  - Enemy
+  - score
+  - Grenade
+  - Explosion
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -41,4 +49,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: bg
+    uniqueID: 1340076217
+    locked: 0
+  - name: userIntace
+    uniqueID: 1807553359
+    locked: 0
+  - name: GameObject
+    uniqueID: 1436272351
     locked: 0
