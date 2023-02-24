@@ -2,10 +2,10 @@
 Developed a three level 2D zombie shooter game with multiple enemies, bosses and different rewards points. As a group we designed new levels and mechanics and as the level increases, the game difficulty increases. The player can shoot at zombies using the “spacebar” and throw grenades by pressing “F” on the keyboard. As the game progresses, players can collect different rewards such as extra lives and coins that can boost up a player's score. On each level, once the player reaches 500 in score, a circle appears in the game and if the player collides with that, it takes you to the next level. In the final level, players need to fight with a boss to win the game. The game contains a complete playable loop where the player can restart once dead, and it has a fully functional menu option. 
 
 **Team members**
-Barua, Anik
-Cantu, Nathan
-Chen, Christ 
-Chen, Michael
+1. Barua, Anik
+2. Cantu, Nathan
+3. Chen, Christ 
+4. Chen, Michael
 
 **GitHub Repo** - https://github.com/Michael-Susu12138/Exercise4--Collaborative-Development
 
