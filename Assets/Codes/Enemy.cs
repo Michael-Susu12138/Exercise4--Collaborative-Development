@@ -6,7 +6,10 @@ public class Enemy : MonoBehaviour
     Rigidbody2D _rigidbody2D;
     int speed;
     public int pointValue;
+    private int totalPoint = 0;
     public int health;
+    private float SplashRange = 3;
+    // public Transform Grenade;
     // public Transform spawnPoint;
     // public Animator explosionAnimation;
     GameManager _gameManager;
@@ -28,6 +31,24 @@ public class Enemy : MonoBehaviour
             Destroy(other.gameObject);  
         }
     }
+    private void BombZombie(){
+        var hitColliders = Physics2D.OverlapCircleAll(transform.position,SplashRange);
+        foreach (var Zombie in hitColliders) {
+            if (Zombie.gameObject.CompareTag("Enemy")){
+                var script = Zombie.gameObject.GetComponent<Enemy>();
+                // print(script);
+                script.health -= 150;
+                totalPoint += script.pointValue;
+                print(totalPoint);
+                if(script.health <= 0){
+                    // Destroy(Zombie.GetComponent<GameObject>);
+                    Destroy(Zombie.gameObject);
+                }
+
+            }
+            
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Bullet")){
             // _label.text = "+"+pointValue;
@@ -37,7 +58,10 @@ public class Enemy : MonoBehaviour
             // _gameManager.AddExplosionEffects(explosionAnimation,spawnPoint);
         }
         if (other.CompareTag("Grenade")){
-            UpdateEnemy(150,other);
+            BombZombie();
+            _gameManager.AddScore(totalPoint); 
+            Destroy(other.gameObject);
+            totalPoint = 0;
         }
         if(other.CompareTag("kill")){
             Destroy(gameObject);

@@ -174,3 +174,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointValue: 5
   health: 50
+  Grenade: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
