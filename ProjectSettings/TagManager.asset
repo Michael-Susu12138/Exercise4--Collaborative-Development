@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - score
   - Grenade
+  - heart
+  - GrenadeIcon
   layers:
   - Default
   - TransparentFX
