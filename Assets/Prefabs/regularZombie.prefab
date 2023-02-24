@@ -173,3 +173,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: 5
+  health: 50

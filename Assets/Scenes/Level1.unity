@@ -774,6 +774,63 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6790452830425911904, guid: cccb9877b9666ff4b865b7d60accb402, type: 3}
   m_PrefabInstance: {fileID: 3125920065550737851}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1642543266
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2720698253669490724, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_Name
+      value: grenade (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
 --- !u!1001 &1652880816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -987,9 +1044,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1642543268, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2720698253669490724, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
       propertyPath: m_Name
       value: grenade
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720698253669490724, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3696327287844644789, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
       propertyPath: m_RootOrder
@@ -1104,10 +1169,6 @@ PrefabInstance:
     - target: {fileID: 3624956725839726530, guid: 9459d9a1554c24f02b2d22546cc5f47c, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3624956726685099596, guid: 9459d9a1554c24f02b2d22546cc5f47c, type: 3}
-      propertyPath: totalLife.Array.size
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3624956726685099596, guid: 9459d9a1554c24f02b2d22546cc5f47c, type: 3}
       propertyPath: totalLife.Array.data[0]

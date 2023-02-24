@@ -5,8 +5,8 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    private int score;
 
-    private int score = 0;
     public TextMeshProUGUI scoreUI;
 
     private void Awake() {
@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        score = 0;
 
         scoreUI.text = "SCORE: " + score;
 
