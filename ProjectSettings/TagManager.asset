@@ -9,6 +9,8 @@ TagManager:
   - Bullet
   - score
   - kill
+  - Elephant
+  - ElephantHitBox
   layers:
   - Default
   - TransparentFX
