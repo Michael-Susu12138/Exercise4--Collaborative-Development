@@ -4,13 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Grenade
   - Bullet
-  - score
   - kill
-  - Elephant
-  - ElephantHitBox
+  - Enemy
+  - score
+  - Grenade
+  - heart
+  - GrenadeIcon
+  - portal
+  - enemyBullet
   layers:
   - Default
   - TransparentFX
@@ -45,9 +47,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 3368649387
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: bg
+    uniqueID: 1340076217
+    locked: 0
+  - name: userIntace
+    uniqueID: 1807553359
+    locked: 0
+  - name: GameObject
+    uniqueID: 1436272351
     locked: 0
