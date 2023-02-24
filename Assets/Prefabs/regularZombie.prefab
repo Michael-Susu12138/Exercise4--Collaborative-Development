@@ -174,3 +174,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointValue: 5
   health: 50
+  explosion: {fileID: 6141208311391180065, guid: b891a0caa9ffb45a19d06415b0d9aeb1, type: 3}
+  bigBang: {fileID: 3940656160672922469, guid: ba2f2a788ffc248fdb3a71c1eaf33435, type: 3}

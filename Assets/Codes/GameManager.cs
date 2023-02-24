@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private int score;
-
+    private int score = 0;
     public TextMeshProUGUI scoreUI;
 
     private void Awake() {
@@ -21,19 +21,18 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        score = 0;
-
         scoreUI.text = "SCORE: " + score;
-
     }
-
+    public void resetScore(){
+        score = 0;
+    }
+    public int getScore(){
+        return score;
+    }
     public void AddScore(int points) 
     {
-
         score += points;
         GameObject.FindGameObjectWithTag("score").GetComponent<TextMeshProUGUI>().text = "SCORE: " + score;
-
     }
     // Update is called once per frame
     void Update()
@@ -43,6 +42,13 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+#endif
+#if !UNITY_WEBGL
+        // Esc to Exit
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("StartPage");
         }
 #endif
     }
