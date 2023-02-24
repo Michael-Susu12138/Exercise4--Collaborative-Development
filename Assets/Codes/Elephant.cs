@@ -13,6 +13,7 @@ public class Elephant : MonoBehaviour
     // public Transform spawnPoint;
     // public Animator explosionAnimation;
     GameManager _gameManager;
+    public GameObject portal;
     GameObject player;
 
     
@@ -75,8 +76,11 @@ public class Elephant : MonoBehaviour
         health -= dmg;
         if(health <= 0){
             Destroy(gameObject);
-            Destroy(other.gameObject);  
-        }
+            Destroy(other.gameObject); 
+            Vector2 randomPos = new Vector2(102.81f, -1.03f);
+            Instantiate(portal, randomPos, Quaternion.identity);
+            }
+        } 
     }
     //     if(other.CompareTag("Player")){
     //         StartCoroutine(Wait());
@@ -90,5 +94,4 @@ public class Elephant : MonoBehaviour
     //     turnTime = false;
     // }
 
-    
-}
+

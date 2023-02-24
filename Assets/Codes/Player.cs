@@ -14,8 +14,10 @@ public class Player : MonoBehaviour
     public float y_axis;
     public AudioClip shootSound;
     public Transform spawnPoint;
+    public Transform LeftspawnPoint;
     public GameObject bulletPrefab;
     public GameObject deadSound;
+    SpriteRenderer _spritePlayer;
     
     // public Transform grenadeIconStatus;
     public GameObject grenadePrefab;
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour
         grenadeCounter = 3;
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _audioSource = GetComponent<AudioSource>();
+        _spritePlayer = GetComponent<SpriteRenderer>();
         _gameManager = GameObject.FindObjectOfType<GameManager>();
         // GameObject firstGrenade = Instantiate(grenadeSticker, grenadeIconStatus.position, Quaternion.identity);
         // totalGrenades.Add(firstGrenade);
@@ -56,7 +59,14 @@ public class Player : MonoBehaviour
         float xSpeed = Input.GetAxis("Horizontal") * speed;
         float ySpeed = Input.GetAxis("Vertical") * speed;
         _rigidbody2D.velocity = new Vector2(xSpeed, ySpeed);
-
+        if (Input.GetButtonDown("Horizontal") && Input.GetAxisRaw("Horizontal") > 0) {
+        // Move to the right
+        _spritePlayer.flipX = false;
+        } 
+        else if (Input.GetButtonDown("Horizontal") && Input.GetAxisRaw("Horizontal") < 0) {
+            // Move to the left
+        _spritePlayer.flipX = true;
+        }
         if(!onetime){
             if(_gameManager.getScore() >= 500){
                 Vector2 randomPos = new Vector2(Random.Range(5,8),Random.Range(-4.5f, 4.5f));
@@ -67,36 +77,55 @@ public class Player : MonoBehaviour
         
         if(Input.GetButtonDown("Jump")){
             _audioSource.PlayOneShot(shootSound);
-            GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
-            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
+            GameObject newBullet;
+            if(_spritePlayer.flipX == false) {
+                newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
+                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
+            }
+            else {
+                newBullet = Instantiate(bulletPrefab, LeftspawnPoint.position, Quaternion.identity);
+                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(-bulletSpeed, 0));
+            }
         }
         if(Input.GetButtonDown("Grenade")){
             int grenadesCount = totalGrenades.Count;
             // _audioSource.PlayOneShot(shootSound); // grenade sound
             if(grenadeCounter > 0){
-                GameObject newGrenade = Instantiate(grenadePrefab, spawnPoint.position, Quaternion.identity);
+                GameObject newGrenade;
+            if(_spritePlayer.flipX == false) {
+                newGrenade = Instantiate(grenadePrefab, spawnPoint.position, Quaternion.identity);
                 newGrenade.GetComponent<Rigidbody2D>().AddForce(new Vector2(grenadeSpeed, 0));
-                Destroy(totalGrenades[grenadeCounter-1]);
-                totalGrenades.RemoveAt(grenadeCounter-1);
-                --grenadeCounter;
+            }
+            else {
+                newGrenade = Instantiate(grenadePrefab, LeftspawnPoint.position, Quaternion.identity);
+                newGrenade.GetComponent<Rigidbody2D>().AddForce(new Vector2(-grenadeSpeed, 0));
+            }
+            Destroy(totalGrenades[grenadeCounter-1]);
+            totalGrenades.RemoveAt(grenadeCounter-1);
+            --grenadeCounter;
             } 
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("portal")){
+            print("portal");
             if(levelName == "level1"){
                 _gameManager.resetScore();
                 SceneManager.LoadScene("level2");
             }
             else if (levelName == "level2"){
                 _gameManager.resetScore();
-                SceneManager.LoadScene("Won");
+                SceneManager.LoadScene("level3");
+            }
+            else if (levelName == "level3"){
+                _gameManager.resetScore();
+                SceneManager.LoadScene("won");
             }
             
         }
         // if(other.CompareTag("Enemy") || other.CompareTag("Enemy2") || other.CompareTag("Enemy2V2") || other.CompareTag("Enemy3"))
-        if(other.CompareTag("Enemy") || other.CompareTag("enemyBullet"))
+        if(other.CompareTag("Enemy") || other.CompareTag("enemyBullet") || other.CompareTag("ElephantHitBox"))
         {
             // If no more heart left, then the player is dead.
             if (lifeCounter == 1) {

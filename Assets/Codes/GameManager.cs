@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreUI.text = "SCORE: " + score;
+        // scoreUI.text = "SCORE: " + score;
     }
     public void resetScore(){
         score = 0;
