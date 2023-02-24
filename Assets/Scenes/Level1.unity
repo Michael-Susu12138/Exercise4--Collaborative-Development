@@ -690,7 +690,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1670448833
+  m_SortingLayerID: -926317909
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 436da378566090b43b437e5d15c0f2b8, type: 3}
@@ -717,7 +717,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1046839861
 GameObject:
@@ -1020,7 +1020,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2126961347
 Transform:
@@ -1244,6 +1244,10 @@ PrefabInstance:
       value: player (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5643390006430969929, guid: ee88b066863b0464f8028271a5eaba86, type: 3}
+      propertyPath: grenadePrefab
+      value: 
+      objectReference: {fileID: 2720698253669490724, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+    - target: {fileID: 5643390006430969929, guid: ee88b066863b0464f8028271a5eaba86, type: 3}
       propertyPath: totalLife.Array.data[0]
       value: 
       objectReference: {fileID: 1076267735}
@@ -1257,7 +1261,7 @@ PrefabInstance:
       objectReference: {fileID: 1331366193}
     - target: {fileID: 5643390006430969930, guid: ee88b066863b0464f8028271a5eaba86, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5643390006430969930, guid: ee88b066863b0464f8028271a5eaba86, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1298,6 +1302,10 @@ PrefabInstance:
     - target: {fileID: 5643390006430969930, guid: ee88b066863b0464f8028271a5eaba86, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643390006430969931, guid: ee88b066863b0464f8028271a5eaba86, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee88b066863b0464f8028271a5eaba86, type: 3}

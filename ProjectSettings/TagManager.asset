@@ -3,17 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-
   tags:
+  - Enemy
+  - Grenade
   - Bullet
   - score
   - kill
-  - Enemy
-
-  - Grenade
-
-
-
+  - Elephant
+  - ElephantHitBox
   layers:
   - Default
   - TransparentFX
@@ -21,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Camera
+  - 
   - 
   - 
   - 
@@ -49,7 +46,7 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
-    uniqueID: 2624518463
+    uniqueID: 3368649387
     locked: 0
   - name: Default
     uniqueID: 0
