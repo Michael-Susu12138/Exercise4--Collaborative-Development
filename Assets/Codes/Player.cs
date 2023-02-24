@@ -7,10 +7,12 @@ public class Player : MonoBehaviour
 {
     int speed = 10;
     int bulletSpeed = 400;
-    int lifeCounter = 3; // player gets total 3 life
+    int grenadeSpeed = 600;
+    int lifeCounter; // player gets total 3 life
     public AudioClip shootSound;
     public Transform spawnPoint;
     public GameObject bulletPrefab;
+    public GameObject grenadePrefab;
     public GameObject[] totalLife; // array to hold heart images
     // public GameObject deadSound;
     public string endGame = "GameOver";
@@ -19,7 +21,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-         _rigidbody2D = GetComponent<Rigidbody2D>();
+        lifeCounter = 3;
+        _rigidbody2D = GetComponent<Rigidbody2D>();
         _audioSource = GetComponent<AudioSource>();
     }
 
@@ -34,6 +37,11 @@ public class Player : MonoBehaviour
             _audioSource.PlayOneShot(shootSound);
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
+        }
+        if(Input.GetButtonDown("Grenade")){
+            // _audioSource.PlayOneShot(shootSound); // grenade sound
+            GameObject newGrenade = Instantiate(grenadePrefab, spawnPoint.position, Quaternion.identity);
+            newGrenade.GetComponent<Rigidbody2D>().AddForce(new Vector2(grenadeSpeed, 0));
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

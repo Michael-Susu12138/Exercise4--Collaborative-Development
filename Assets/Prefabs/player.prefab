@@ -296,6 +296,12 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: d3404d7e274884ec48fd9ba576fc5cc1, type: 3}
   spawnPoint: {fileID: 3624956725839726530}
   bulletPrefab: {fileID: 2763773271952435029, guid: de79afc21bde745538eb7e852702334b, type: 3}
+  grenadePrefab: {fileID: 2720698253669490724, guid: 2324c4c507abc1847a84b521fb9b0430, type: 3}
+  totalLife:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  endGame: GameOver
 --- !u!82 &1831228343162512837
 AudioSource:
   m_ObjectHideFlags: 0
