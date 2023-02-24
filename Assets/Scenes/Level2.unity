@@ -727,16 +727,6 @@ PolygonCollider2D:
       - {x: -4.765, y: 4.77}
       - {x: -4.995, y: 4.6}
       - {x: -5.055, y: 4.58}
-      - {x: -2.0387058, y: 4.588988}
-      - {x: 1.65296, y: 1.5076457}
-      - {x: 1.739918, y: 4.2072225}
-      - {x: 4.6828394, y: 2.154254}
-      - {x: 5.4228544, y: -0.52590823}
-      - {x: 5.2312174, y: -4.1254444}
-      - {x: -2.3524117, y: -0.80921674}
-      - {x: -4.232231, y: -2.4420953}
-      - {x: -7.6484246, y: -0.67814434}
-      - {x: -6.836856, y: 2.4917312}
       - {x: -5.165, y: 4.5299997}
       - {x: -5.355, y: 4.45}
       - {x: -5.595, y: 4.25}
@@ -1551,7 +1541,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1154867159
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1613,7 +1603,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1154867155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 546083a46905143468e8aecc32340b24, type: 3}
+  m_Script: {fileID: 11500000, guid: e574678eba621b143b031615aea64112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100

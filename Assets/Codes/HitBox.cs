@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Elephant : MonoBehaviour
+public class HitBox : MonoBehaviour
 {
     Rigidbody2D _rigidbody2D;
     SpriteRenderer _spritePlayer;
@@ -50,45 +50,6 @@ public class Elephant : MonoBehaviour
         _rigidbody2D.AddForce(new Vector2(velocity,0));
         _spritePlayer.flipX = turn;
     }
-    private void OnTriggerEnter2D(Collider2D other){
-        // print(other.name);
-        if(other.CompareTag("Bullet")){
-            print("bullet");
-            print(health);
-            // _label.text = "+"+pointValue;
-            // Instantiate(_label,spawnPoint.position,Quaternion.identity);
-            // _gameManager.AddScore(pointValue);   
-            UpdateEnemy(50,other);
-            // _gameManager.AddExplosionEffects(explosionAnimation,spawnPoint);
-        }
-        if (other.CompareTag("Grenade")){
-            print("grenade");
-            // _gameManager.AddScore(pointValue+50);   
-            UpdateEnemy(150,other);
-        }
-        if(other.CompareTag("kill")){
-            Destroy(gameObject);
-            // Destroy(other.gameObject); 
-        }
-    }
-    private void UpdateEnemy(int dmg,Collider2D other){
-        health -= dmg;
-        if(health <= 0){
-            Destroy(gameObject);
-            Destroy(other.gameObject);  
-        }
-    }
-    //     if(other.CompareTag("Player")){
-    //         StartCoroutine(Wait());
-    //     }
-    // }
-
-    // IEnumerator Wait()
-    // {
-    //     turnTime = true;
-    //     yield return new WaitForSeconds(0.1f);
-    //     turnTime = false;
-    // }
 
     
 }
