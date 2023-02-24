@@ -36,12 +36,10 @@ public class Enemy : MonoBehaviour
         foreach (var Zombie in hitColliders) {
             if (Zombie.gameObject.CompareTag("Enemy")){
                 var script = Zombie.gameObject.GetComponent<Enemy>();
-                // print(script);
                 script.health -= 150;
-                totalPoint += script.pointValue;
-                print(totalPoint);
                 if(script.health <= 0){
                     // Destroy(Zombie.GetComponent<GameObject>);
+                    totalPoint += script.pointValue;
                     Destroy(Zombie.gameObject);
                 }
 
